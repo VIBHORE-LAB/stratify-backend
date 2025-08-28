@@ -14,6 +14,6 @@ export default (sequelize) =>{
         passwordHash:{type: DataTypes.STRING, allowNull:false},
         name:{type: DataTypes.STRING}
     },
-    {sequelize, modelName: 'User', tableName:'Users', underscored: true});
+    {sequelize, modelName: 'User', tableName:'users', underscored: true});
     return User;
 }
