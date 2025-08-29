@@ -17,7 +17,8 @@ export function runBacktest(dataPath, strategyName, params = {}) {
   const emitter = new EventEmitter();
 
   // Build argv as your C++ expects:
-  const bin = path.resolve(process.cwd(), process.env.CENGINE_BIN || './bin/backtester');
+  
+  const bin = path.resolve(process.cwd(), process.env.CENGINE_BIN);
   const args = [dataPath, strategyName];
 
   Object.entries(params).forEach(([k, v]) => {
@@ -48,7 +49,7 @@ export function runBacktest(dataPath, strategyName, params = {}) {
   child.stderr.on('data', (d) => console.error('C++ stderr:', d.toString()));
 
   child.on('close', (code) => {
-    if (code !== 0) emitter.emit('error', new console.error(`C++ exited ${code}`));
+if (code !== 0) emitter.emit('error', new Error(`C++ exited ${code}`));
   });
 
   emitter.kill = () => child.kill();

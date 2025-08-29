@@ -1,3 +1,1 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\backtester.dir/objects.a
-C:\mingw64\bin\ar.exe qc CMakeFiles\backtester.dir/objects.a @CMakeFiles\backtester.dir\objects1.rsp
-C:\mingw64\bin\g++.exe -Wl,--whole-archive CMakeFiles\backtester.dir/objects.a -Wl,--no-whole-archive -o backtester.exe -Wl,--out-implib,libbacktester.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\backtester.dir\linkLibs.rsp
+/usr/bin/c++ CMakeFiles/backtester.dir/src/data_loader.cpp.o CMakeFiles/backtester.dir/src/engine.cpp.o CMakeFiles/backtester.dir/src/main.cpp.o CMakeFiles/backtester.dir/src/mean_reversion_strategy.cpp.o CMakeFiles/backtester.dir/src/momentum_strategy.cpp.o CMakeFiles/backtester.dir/src/recorder.cpp.o -o backtester 

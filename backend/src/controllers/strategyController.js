@@ -2,7 +2,8 @@ import { runStrategyForUser } from "../services/strategyService.js";
 
 export const runStrategy = async (req,res) =>{
     const userId = req.user.id;
-    const {strategyName, params, dataPath} = req.body;
+    const {strategyName, params} = req.body;
+    const dataPath = req.file ? req.file.path : req.body.dataPath;
 
     if(!strategyName || !params || !dataPath){
         return res.status(400).json({message:"Strategy Name, Params, Data Path are required"});
