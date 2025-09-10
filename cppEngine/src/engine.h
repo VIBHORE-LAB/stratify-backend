@@ -1,57 +1,59 @@
 #pragma once
-#include "types.h"
-#include "recorder.h"
+#include <vector>
+#include <string>
 #include <queue>
+#include <thread>
 #include <mutex>
 #include <condition_variable>
-#include <thread>
 #include <atomic>
-#include <functional>
-
-using namespace std;
+#include <memory>
+#include "recorder.h"
+#include "types.h"  
 
 class Strategy;
+
 class Engine {
-    public:
-    Engine();
-    ~Engine();
-
-    void start(Strategy* strategy, const vector<Tick>& ticks);
-    void stop();
-    bool isRunning(); // Added this missing method
-
-    void submitOrder(const string& side, double price, int quantity, const string& timestamp, bool isMarket);
-    void saveResults(const string& tradesFile = "out_trades.csv", const string& navFile = "out_nav.csv");
-
-    private:
-    void tickWorker();
-    void executionWorker();
-
-    string genOrderId();
-
-    Strategy* strategyPtr;
-    vector<Tick> ticks;
+private:
+    std::unique_ptr<Strategy> strategyPtr;
+    std::vector<Tick> ticks;
     size_t tickIndex;
-
-    queue<Order> orderQueue;
-    mutex orderMutex;
-    condition_variable orderCv;
-
-    mutex tickMutex;
-    condition_variable tickCv;
-    atomic<bool> running;
-    atomic<bool> ticksLoaded;
-
-    thread tickThread;
-    thread execThread;
-
-    Recorder recorder;
+    std::atomic<bool> running;
 
     int position;
     double cash;
     double nav;
     double lastPriceSeen;
-
-    int executionLatencyMs;
+    double executionLatencyMs;
     double feePerTrade;
+
+    std::thread tickThread;
+    std::thread execThread;
+    std::mutex tickMutex;
+    std::mutex orderMutex;
+    std::condition_variable orderCv;
+    std::queue<Order> orderQueue;
+
+    Recorder recorder;
+
+    void tickWorker();
+    void executionWorker();
+    std::string genOrderId();
+
+public:
+    Engine();
+    ~Engine();
+    void start(std::unique_ptr<Strategy> strat, const std::vector<Tick>& inTicks);
+    void stop();
+    bool isRunning() const;
+    void submitOrder(const std::string& side, double price, int qty,
+                     const std::string& timestamp, bool isMarket = true);
+    void saveResults(const std::string& tradesFile, const std::string& navFile);
+
+
+
+
+    int getPosition() const {return position;}
+    double getCash() const {return cash;}
+    double getNav() const {return nav;}
+    double getLastPrice() const {return lastPriceSeen;}
 };

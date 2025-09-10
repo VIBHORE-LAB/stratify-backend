@@ -1,4 +1,4 @@
-# Install script for directory: /media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine
+# Install script for directory: /media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

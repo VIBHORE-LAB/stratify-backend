@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine"
+CMAKE_SOURCE_DIR = "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/build"
+CMAKE_BINARY_DIR = "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/backtester.dir/depend.make
@@ -69,111 +69,207 @@ include CMakeFiles/backtester.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/backtester.dir/flags.make
 
+CMakeFiles/backtester.dir/src/bollinger_strategy.cpp.o: CMakeFiles/backtester.dir/flags.make
+CMakeFiles/backtester.dir/src/bollinger_strategy.cpp.o: /media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/bollinger_strategy.cpp
+CMakeFiles/backtester.dir/src/bollinger_strategy.cpp.o: CMakeFiles/backtester.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/backtester.dir/src/bollinger_strategy.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/backtester.dir/src/bollinger_strategy.cpp.o -MF CMakeFiles/backtester.dir/src/bollinger_strategy.cpp.o.d -o CMakeFiles/backtester.dir/src/bollinger_strategy.cpp.o -c "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/bollinger_strategy.cpp"
+
+CMakeFiles/backtester.dir/src/bollinger_strategy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/backtester.dir/src/bollinger_strategy.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/bollinger_strategy.cpp" > CMakeFiles/backtester.dir/src/bollinger_strategy.cpp.i
+
+CMakeFiles/backtester.dir/src/bollinger_strategy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/backtester.dir/src/bollinger_strategy.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/bollinger_strategy.cpp" -o CMakeFiles/backtester.dir/src/bollinger_strategy.cpp.s
+
+CMakeFiles/backtester.dir/src/breakout_strategy.cpp.o: CMakeFiles/backtester.dir/flags.make
+CMakeFiles/backtester.dir/src/breakout_strategy.cpp.o: /media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/breakout_strategy.cpp
+CMakeFiles/backtester.dir/src/breakout_strategy.cpp.o: CMakeFiles/backtester.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/backtester.dir/src/breakout_strategy.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/backtester.dir/src/breakout_strategy.cpp.o -MF CMakeFiles/backtester.dir/src/breakout_strategy.cpp.o.d -o CMakeFiles/backtester.dir/src/breakout_strategy.cpp.o -c "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/breakout_strategy.cpp"
+
+CMakeFiles/backtester.dir/src/breakout_strategy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/backtester.dir/src/breakout_strategy.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/breakout_strategy.cpp" > CMakeFiles/backtester.dir/src/breakout_strategy.cpp.i
+
+CMakeFiles/backtester.dir/src/breakout_strategy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/backtester.dir/src/breakout_strategy.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/breakout_strategy.cpp" -o CMakeFiles/backtester.dir/src/breakout_strategy.cpp.s
+
 CMakeFiles/backtester.dir/src/data_loader.cpp.o: CMakeFiles/backtester.dir/flags.make
-CMakeFiles/backtester.dir/src/data_loader.cpp.o: /media/onlyvibhore/New\ Volume/vscode(webdev)/Trading-Backend/cppEngine/src/data_loader.cpp
+CMakeFiles/backtester.dir/src/data_loader.cpp.o: /media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/data_loader.cpp
 CMakeFiles/backtester.dir/src/data_loader.cpp.o: CMakeFiles/backtester.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/backtester.dir/src/data_loader.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/backtester.dir/src/data_loader.cpp.o -MF CMakeFiles/backtester.dir/src/data_loader.cpp.o.d -o CMakeFiles/backtester.dir/src/data_loader.cpp.o -c "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/src/data_loader.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/backtester.dir/src/data_loader.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/backtester.dir/src/data_loader.cpp.o -MF CMakeFiles/backtester.dir/src/data_loader.cpp.o.d -o CMakeFiles/backtester.dir/src/data_loader.cpp.o -c "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/data_loader.cpp"
 
 CMakeFiles/backtester.dir/src/data_loader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/backtester.dir/src/data_loader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/src/data_loader.cpp" > CMakeFiles/backtester.dir/src/data_loader.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/data_loader.cpp" > CMakeFiles/backtester.dir/src/data_loader.cpp.i
 
 CMakeFiles/backtester.dir/src/data_loader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/backtester.dir/src/data_loader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/src/data_loader.cpp" -o CMakeFiles/backtester.dir/src/data_loader.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/data_loader.cpp" -o CMakeFiles/backtester.dir/src/data_loader.cpp.s
 
 CMakeFiles/backtester.dir/src/engine.cpp.o: CMakeFiles/backtester.dir/flags.make
-CMakeFiles/backtester.dir/src/engine.cpp.o: /media/onlyvibhore/New\ Volume/vscode(webdev)/Trading-Backend/cppEngine/src/engine.cpp
+CMakeFiles/backtester.dir/src/engine.cpp.o: /media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/engine.cpp
 CMakeFiles/backtester.dir/src/engine.cpp.o: CMakeFiles/backtester.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/backtester.dir/src/engine.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/backtester.dir/src/engine.cpp.o -MF CMakeFiles/backtester.dir/src/engine.cpp.o.d -o CMakeFiles/backtester.dir/src/engine.cpp.o -c "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/src/engine.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/backtester.dir/src/engine.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/backtester.dir/src/engine.cpp.o -MF CMakeFiles/backtester.dir/src/engine.cpp.o.d -o CMakeFiles/backtester.dir/src/engine.cpp.o -c "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/engine.cpp"
 
 CMakeFiles/backtester.dir/src/engine.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/backtester.dir/src/engine.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/src/engine.cpp" > CMakeFiles/backtester.dir/src/engine.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/engine.cpp" > CMakeFiles/backtester.dir/src/engine.cpp.i
 
 CMakeFiles/backtester.dir/src/engine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/backtester.dir/src/engine.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/src/engine.cpp" -o CMakeFiles/backtester.dir/src/engine.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/engine.cpp" -o CMakeFiles/backtester.dir/src/engine.cpp.s
+
+CMakeFiles/backtester.dir/src/macd_strategy.cpp.o: CMakeFiles/backtester.dir/flags.make
+CMakeFiles/backtester.dir/src/macd_strategy.cpp.o: /media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/macd_strategy.cpp
+CMakeFiles/backtester.dir/src/macd_strategy.cpp.o: CMakeFiles/backtester.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/backtester.dir/src/macd_strategy.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/backtester.dir/src/macd_strategy.cpp.o -MF CMakeFiles/backtester.dir/src/macd_strategy.cpp.o.d -o CMakeFiles/backtester.dir/src/macd_strategy.cpp.o -c "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/macd_strategy.cpp"
+
+CMakeFiles/backtester.dir/src/macd_strategy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/backtester.dir/src/macd_strategy.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/macd_strategy.cpp" > CMakeFiles/backtester.dir/src/macd_strategy.cpp.i
+
+CMakeFiles/backtester.dir/src/macd_strategy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/backtester.dir/src/macd_strategy.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/macd_strategy.cpp" -o CMakeFiles/backtester.dir/src/macd_strategy.cpp.s
 
 CMakeFiles/backtester.dir/src/main.cpp.o: CMakeFiles/backtester.dir/flags.make
-CMakeFiles/backtester.dir/src/main.cpp.o: /media/onlyvibhore/New\ Volume/vscode(webdev)/Trading-Backend/cppEngine/src/main.cpp
+CMakeFiles/backtester.dir/src/main.cpp.o: /media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/main.cpp
 CMakeFiles/backtester.dir/src/main.cpp.o: CMakeFiles/backtester.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/backtester.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/backtester.dir/src/main.cpp.o -MF CMakeFiles/backtester.dir/src/main.cpp.o.d -o CMakeFiles/backtester.dir/src/main.cpp.o -c "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/src/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/backtester.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/backtester.dir/src/main.cpp.o -MF CMakeFiles/backtester.dir/src/main.cpp.o.d -o CMakeFiles/backtester.dir/src/main.cpp.o -c "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/main.cpp"
 
 CMakeFiles/backtester.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/backtester.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/src/main.cpp" > CMakeFiles/backtester.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/main.cpp" > CMakeFiles/backtester.dir/src/main.cpp.i
 
 CMakeFiles/backtester.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/backtester.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/src/main.cpp" -o CMakeFiles/backtester.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/main.cpp" -o CMakeFiles/backtester.dir/src/main.cpp.s
 
 CMakeFiles/backtester.dir/src/mean_reversion_strategy.cpp.o: CMakeFiles/backtester.dir/flags.make
-CMakeFiles/backtester.dir/src/mean_reversion_strategy.cpp.o: /media/onlyvibhore/New\ Volume/vscode(webdev)/Trading-Backend/cppEngine/src/mean_reversion_strategy.cpp
+CMakeFiles/backtester.dir/src/mean_reversion_strategy.cpp.o: /media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/mean_reversion_strategy.cpp
 CMakeFiles/backtester.dir/src/mean_reversion_strategy.cpp.o: CMakeFiles/backtester.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/backtester.dir/src/mean_reversion_strategy.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/backtester.dir/src/mean_reversion_strategy.cpp.o -MF CMakeFiles/backtester.dir/src/mean_reversion_strategy.cpp.o.d -o CMakeFiles/backtester.dir/src/mean_reversion_strategy.cpp.o -c "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/src/mean_reversion_strategy.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/backtester.dir/src/mean_reversion_strategy.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/backtester.dir/src/mean_reversion_strategy.cpp.o -MF CMakeFiles/backtester.dir/src/mean_reversion_strategy.cpp.o.d -o CMakeFiles/backtester.dir/src/mean_reversion_strategy.cpp.o -c "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/mean_reversion_strategy.cpp"
 
 CMakeFiles/backtester.dir/src/mean_reversion_strategy.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/backtester.dir/src/mean_reversion_strategy.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/src/mean_reversion_strategy.cpp" > CMakeFiles/backtester.dir/src/mean_reversion_strategy.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/mean_reversion_strategy.cpp" > CMakeFiles/backtester.dir/src/mean_reversion_strategy.cpp.i
 
 CMakeFiles/backtester.dir/src/mean_reversion_strategy.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/backtester.dir/src/mean_reversion_strategy.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/src/mean_reversion_strategy.cpp" -o CMakeFiles/backtester.dir/src/mean_reversion_strategy.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/mean_reversion_strategy.cpp" -o CMakeFiles/backtester.dir/src/mean_reversion_strategy.cpp.s
 
 CMakeFiles/backtester.dir/src/momentum_strategy.cpp.o: CMakeFiles/backtester.dir/flags.make
-CMakeFiles/backtester.dir/src/momentum_strategy.cpp.o: /media/onlyvibhore/New\ Volume/vscode(webdev)/Trading-Backend/cppEngine/src/momentum_strategy.cpp
+CMakeFiles/backtester.dir/src/momentum_strategy.cpp.o: /media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/momentum_strategy.cpp
 CMakeFiles/backtester.dir/src/momentum_strategy.cpp.o: CMakeFiles/backtester.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/backtester.dir/src/momentum_strategy.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/backtester.dir/src/momentum_strategy.cpp.o -MF CMakeFiles/backtester.dir/src/momentum_strategy.cpp.o.d -o CMakeFiles/backtester.dir/src/momentum_strategy.cpp.o -c "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/src/momentum_strategy.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/backtester.dir/src/momentum_strategy.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/backtester.dir/src/momentum_strategy.cpp.o -MF CMakeFiles/backtester.dir/src/momentum_strategy.cpp.o.d -o CMakeFiles/backtester.dir/src/momentum_strategy.cpp.o -c "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/momentum_strategy.cpp"
 
 CMakeFiles/backtester.dir/src/momentum_strategy.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/backtester.dir/src/momentum_strategy.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/src/momentum_strategy.cpp" > CMakeFiles/backtester.dir/src/momentum_strategy.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/momentum_strategy.cpp" > CMakeFiles/backtester.dir/src/momentum_strategy.cpp.i
 
 CMakeFiles/backtester.dir/src/momentum_strategy.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/backtester.dir/src/momentum_strategy.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/src/momentum_strategy.cpp" -o CMakeFiles/backtester.dir/src/momentum_strategy.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/momentum_strategy.cpp" -o CMakeFiles/backtester.dir/src/momentum_strategy.cpp.s
+
+CMakeFiles/backtester.dir/src/moving_crossover_strategy.cpp.o: CMakeFiles/backtester.dir/flags.make
+CMakeFiles/backtester.dir/src/moving_crossover_strategy.cpp.o: /media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/moving_crossover_strategy.cpp
+CMakeFiles/backtester.dir/src/moving_crossover_strategy.cpp.o: CMakeFiles/backtester.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/backtester.dir/src/moving_crossover_strategy.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/backtester.dir/src/moving_crossover_strategy.cpp.o -MF CMakeFiles/backtester.dir/src/moving_crossover_strategy.cpp.o.d -o CMakeFiles/backtester.dir/src/moving_crossover_strategy.cpp.o -c "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/moving_crossover_strategy.cpp"
+
+CMakeFiles/backtester.dir/src/moving_crossover_strategy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/backtester.dir/src/moving_crossover_strategy.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/moving_crossover_strategy.cpp" > CMakeFiles/backtester.dir/src/moving_crossover_strategy.cpp.i
+
+CMakeFiles/backtester.dir/src/moving_crossover_strategy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/backtester.dir/src/moving_crossover_strategy.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/moving_crossover_strategy.cpp" -o CMakeFiles/backtester.dir/src/moving_crossover_strategy.cpp.s
 
 CMakeFiles/backtester.dir/src/recorder.cpp.o: CMakeFiles/backtester.dir/flags.make
-CMakeFiles/backtester.dir/src/recorder.cpp.o: /media/onlyvibhore/New\ Volume/vscode(webdev)/Trading-Backend/cppEngine/src/recorder.cpp
+CMakeFiles/backtester.dir/src/recorder.cpp.o: /media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/recorder.cpp
 CMakeFiles/backtester.dir/src/recorder.cpp.o: CMakeFiles/backtester.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/backtester.dir/src/recorder.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/backtester.dir/src/recorder.cpp.o -MF CMakeFiles/backtester.dir/src/recorder.cpp.o.d -o CMakeFiles/backtester.dir/src/recorder.cpp.o -c "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/src/recorder.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/backtester.dir/src/recorder.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/backtester.dir/src/recorder.cpp.o -MF CMakeFiles/backtester.dir/src/recorder.cpp.o.d -o CMakeFiles/backtester.dir/src/recorder.cpp.o -c "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/recorder.cpp"
 
 CMakeFiles/backtester.dir/src/recorder.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/backtester.dir/src/recorder.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/src/recorder.cpp" > CMakeFiles/backtester.dir/src/recorder.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/recorder.cpp" > CMakeFiles/backtester.dir/src/recorder.cpp.i
 
 CMakeFiles/backtester.dir/src/recorder.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/backtester.dir/src/recorder.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/src/recorder.cpp" -o CMakeFiles/backtester.dir/src/recorder.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/recorder.cpp" -o CMakeFiles/backtester.dir/src/recorder.cpp.s
+
+CMakeFiles/backtester.dir/src/rsi_strategy.cpp.o: CMakeFiles/backtester.dir/flags.make
+CMakeFiles/backtester.dir/src/rsi_strategy.cpp.o: /media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/rsi_strategy.cpp
+CMakeFiles/backtester.dir/src/rsi_strategy.cpp.o: CMakeFiles/backtester.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/backtester.dir/src/rsi_strategy.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/backtester.dir/src/rsi_strategy.cpp.o -MF CMakeFiles/backtester.dir/src/rsi_strategy.cpp.o.d -o CMakeFiles/backtester.dir/src/rsi_strategy.cpp.o -c "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/rsi_strategy.cpp"
+
+CMakeFiles/backtester.dir/src/rsi_strategy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/backtester.dir/src/rsi_strategy.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/rsi_strategy.cpp" > CMakeFiles/backtester.dir/src/rsi_strategy.cpp.i
+
+CMakeFiles/backtester.dir/src/rsi_strategy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/backtester.dir/src/rsi_strategy.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/rsi_strategy.cpp" -o CMakeFiles/backtester.dir/src/rsi_strategy.cpp.s
+
+CMakeFiles/backtester.dir/src/vwap_strategy.cpp.o: CMakeFiles/backtester.dir/flags.make
+CMakeFiles/backtester.dir/src/vwap_strategy.cpp.o: /media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/vwap_strategy.cpp
+CMakeFiles/backtester.dir/src/vwap_strategy.cpp.o: CMakeFiles/backtester.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/backtester.dir/src/vwap_strategy.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/backtester.dir/src/vwap_strategy.cpp.o -MF CMakeFiles/backtester.dir/src/vwap_strategy.cpp.o.d -o CMakeFiles/backtester.dir/src/vwap_strategy.cpp.o -c "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/vwap_strategy.cpp"
+
+CMakeFiles/backtester.dir/src/vwap_strategy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/backtester.dir/src/vwap_strategy.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/vwap_strategy.cpp" > CMakeFiles/backtester.dir/src/vwap_strategy.cpp.i
+
+CMakeFiles/backtester.dir/src/vwap_strategy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/backtester.dir/src/vwap_strategy.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/vwap_strategy.cpp" -o CMakeFiles/backtester.dir/src/vwap_strategy.cpp.s
 
 # Object files for target backtester
 backtester_OBJECTS = \
+"CMakeFiles/backtester.dir/src/bollinger_strategy.cpp.o" \
+"CMakeFiles/backtester.dir/src/breakout_strategy.cpp.o" \
 "CMakeFiles/backtester.dir/src/data_loader.cpp.o" \
 "CMakeFiles/backtester.dir/src/engine.cpp.o" \
+"CMakeFiles/backtester.dir/src/macd_strategy.cpp.o" \
 "CMakeFiles/backtester.dir/src/main.cpp.o" \
 "CMakeFiles/backtester.dir/src/mean_reversion_strategy.cpp.o" \
 "CMakeFiles/backtester.dir/src/momentum_strategy.cpp.o" \
-"CMakeFiles/backtester.dir/src/recorder.cpp.o"
+"CMakeFiles/backtester.dir/src/moving_crossover_strategy.cpp.o" \
+"CMakeFiles/backtester.dir/src/recorder.cpp.o" \
+"CMakeFiles/backtester.dir/src/rsi_strategy.cpp.o" \
+"CMakeFiles/backtester.dir/src/vwap_strategy.cpp.o"
 
 # External object files for target backtester
 backtester_EXTERNAL_OBJECTS =
 
+backtester: CMakeFiles/backtester.dir/src/bollinger_strategy.cpp.o
+backtester: CMakeFiles/backtester.dir/src/breakout_strategy.cpp.o
 backtester: CMakeFiles/backtester.dir/src/data_loader.cpp.o
 backtester: CMakeFiles/backtester.dir/src/engine.cpp.o
+backtester: CMakeFiles/backtester.dir/src/macd_strategy.cpp.o
 backtester: CMakeFiles/backtester.dir/src/main.cpp.o
 backtester: CMakeFiles/backtester.dir/src/mean_reversion_strategy.cpp.o
 backtester: CMakeFiles/backtester.dir/src/momentum_strategy.cpp.o
+backtester: CMakeFiles/backtester.dir/src/moving_crossover_strategy.cpp.o
 backtester: CMakeFiles/backtester.dir/src/recorder.cpp.o
+backtester: CMakeFiles/backtester.dir/src/rsi_strategy.cpp.o
+backtester: CMakeFiles/backtester.dir/src/vwap_strategy.cpp.o
 backtester: CMakeFiles/backtester.dir/build.make
 backtester: CMakeFiles/backtester.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable backtester"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable backtester"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/backtester.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -185,6 +281,6 @@ CMakeFiles/backtester.dir/clean:
 .PHONY : CMakeFiles/backtester.dir/clean
 
 CMakeFiles/backtester.dir/depend:
-	cd "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine" "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine" "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/build" "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/build" "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/build/CMakeFiles/backtester.dir/DependInfo.cmake" "--color=$(COLOR)"
+	cd "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine" "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine" "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/build" "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/build" "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/build/CMakeFiles/backtester.dir/DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CMakeFiles/backtester.dir/depend
 

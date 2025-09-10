@@ -1,25 +1,16 @@
 #include "engine.h"
 #include "strategy.h"
 #include <iostream>
-#include <chrono>
-#include <sstream>
 #include <iomanip>
+#include <chrono>
 
 using namespace std;
 using namespace std::chrono;
 
 Engine::Engine()
-    : strategyPtr(nullptr),
-      tickIndex(0),
-      running(false),
-      ticksLoaded(false),
-      position(0),
-      cash(100000.0), 
-      nav(100000.0),
-      lastPriceSeen(0.0),
-      executionLatencyMs(50), 
-      feePerTrade(1.0) 
-{}
+    : tickIndex(0), running(false), position(0),
+      cash(100000.0), nav(100000.0), lastPriceSeen(0.0),
+      executionLatencyMs(50), feePerTrade(1.0) {}
 
 Engine::~Engine() {
     stop();
@@ -27,65 +18,48 @@ Engine::~Engine() {
 
 string Engine::genOrderId() {
     static atomic<uint64_t> counter{0};
-    uint64_t id = ++counter;
-    stringstream ss;
-    ss << "ORD" << id;
-    return ss.str();
+    return "ORD" + to_string(++counter);
 }
 
-bool Engine::isRunning() {
-    return running;
-}
+bool Engine::isRunning() const { return running; }
 
-void Engine::start(Strategy* strategy, const vector<Tick>& inTicks) {
+void Engine::start(unique_ptr<Strategy> strat, const vector<Tick>& inTicks) {
     if (running) return;
-    strategyPtr = strategy;
+    strategyPtr = move(strat);
     ticks = inTicks;
     tickIndex = 0;
     running = true;
-    ticksLoaded = !ticks.empty();
-    
+
     if (strategyPtr) strategyPtr->onStart();
-    
-    tickThread = thread(&Engine::tickWorker, this);
-    execThread = thread(&Engine::executionWorker, this);
+
+    tickThread = thread([this](){ tickWorker(); });
+    execThread = thread([this](){ executionWorker(); });
 }
 
 void Engine::stop() {
-    if (!running) return;
     running = false;
     orderCv.notify_all();
-    tickCv.notify_all();
+
     if (tickThread.joinable()) tickThread.join();
     if (execThread.joinable()) execThread.join();
+
     if (strategyPtr) strategyPtr->onStop();
 }
 
-void Engine::submitOrder(const string& side, double price, int qty, const string& timestamp, bool isMarket) {
-    Order o;
-    o.id = genOrderId();
-    o.timestamp = timestamp;
-    o.side = side;
-    o.price = price;
-    o.quantity = qty;
-    o.isMarket = isMarket;
-
+void Engine::submitOrder(const string& side, double price, int qty,
+                         const string& timestamp, bool isMarket) {
+    Order o{genOrderId(), timestamp, side, price, qty, isMarket};
     {
         lock_guard<mutex> lk(orderMutex);
         orderQueue.push(o);
     }
     orderCv.notify_one();
 
-    stringstream ss;
-    ss << "{";
-    ss << "\"event\":\"order_submitted\",";
-    ss << "\"order_id\":\"" << o.id << "\",";
-    ss << "\"side\":\"" << o.side << "\",";
-    ss << "\"qty\":" << o.quantity << ",";
-    ss << "\"price\":" << fixed << setprecision(4) << o.price << ",";
-    ss << "\"timestamp\":\"" << o.timestamp << "\"";
-    ss << "}\n";
-    cout << ss.str() << flush;
+    cout << "{\"event\":\"order_submitted\",\"order_id\":\"" << o.id
+         << "\",\"side\":\"" << o.side
+         << "\",\"qty\":" << o.quantity
+         << ",\"price\":" << fixed << setprecision(4) << o.price
+         << ",\"timestamp\":\"" << o.timestamp << "\"}" << endl;
 }
 
 void Engine::tickWorker() {
@@ -105,10 +79,9 @@ void Engine::tickWorker() {
         nav = cash + position * lastPriceSeen;
         recorder.recordNav(t.timestamp, nav);
 
-        if (strategyPtr) {
-            strategyPtr->onTick(t);
-        }
+        if (strategyPtr) strategyPtr->onTick(t);
 
+        this_thread::sleep_for(milliseconds(1));
     }
 }
 
@@ -118,81 +91,45 @@ void Engine::executionWorker() {
         {
             unique_lock<mutex> lk(orderMutex);
             orderCv.wait(lk, [this](){ return !running || !orderQueue.empty(); });
-            if (orderQueue.empty()) {
-                if (!running) break;
-                else continue;
-            }
-            o = orderQueue.front();
-            orderQueue.pop();
+            if (orderQueue.empty()) continue;
+            o = orderQueue.front(); orderQueue.pop();
         }
 
-        this_thread::sleep_for(milliseconds(executionLatencyMs));
+        this_thread::sleep_for(milliseconds((int)executionLatencyMs));
 
         double fillPrice = lastPriceSeen;
         int filled = o.quantity;
 
-        double nominalLiquidity = 500.0; 
-        double sizeImpact = double(o.quantity) / nominalLiquidity;
-        double slippagePct = 0.0;
         if (o.isMarket) {
-            slippagePct = 0.001 * sizeImpact * 100.0; 
-            if (o.side == "BUY") fillPrice = fillPrice * (1.0 + slippagePct);
-            else fillPrice = fillPrice * (1.0 - slippagePct);
+            double slippagePct = 0.001 * double(filled)/500.0*100.0;
+            fillPrice = (o.side=="BUY") ? fillPrice*(1+slippagePct) : fillPrice*(1-slippagePct);
         } else {
-            if ((o.side == "BUY" && o.price >= lastPriceSeen) || (o.side == "SELL" && o.price <= lastPriceSeen)) {
+            if ((o.side=="BUY" && o.price>=lastPriceSeen) || (o.side=="SELL" && o.price<=lastPriceSeen))
                 fillPrice = o.price;
-            } else {
-                stringstream ss;
-                ss << "{";
-                ss << "\"event\":\"order_not_filled\",";
-                ss << "\"order_id\":\"" << o.id << "\",";
-                ss << "\"side\":\"" << o.side << "\",";
-                ss << "\"qty\":" << o.quantity << ",";
-                ss << "\"timestamp\":\"" << o.timestamp << "\"";
-                ss << "}\n";
-                cout << ss.str() << flush;
-                continue;
-            }
+            else continue;
         }
 
-        double totalFee = feePerTrade;
+        if (o.side=="BUY") { position += filled; cash -= fillPrice*filled + feePerTrade; }
+        else { position -= filled; cash += fillPrice*filled - feePerTrade; }
 
-        if (o.side == "BUY") {
-            position += filled;
-            cash -= (fillPrice * filled) + totalFee;
-        } else {
-            position -= filled;
-            cash += (fillPrice * filled) - totalFee;
-        }
-
-        Trade tr{ o.timestamp, o.id, o.side, fillPrice, filled };
+        nav = cash + position*lastPriceSeen;
+        Trade tr{o.timestamp, o.id, o.side, fillPrice, filled};
         recorder.recordTrade(tr);
-
-        stringstream ss;
-        ss << "{";
-        ss << "\"event\":\"trade_executed\",";
-        ss << "\"order_id\":\"" << tr.order_id << "\",";
-        ss << "\"side\":\"" << tr.side << "\",";
-        ss << "\"price\":" << fixed << setprecision(4) << tr.price << ",";
-        ss << "\"qty\":" << tr.quantity << ",";
-        ss << "\"timestamp\":\"" << tr.timestamp << "\"";
-        ss << "}\n";
-        cout << ss.str() << flush;
-
-        nav = cash + position * lastPriceSeen;
         recorder.recordNav(o.timestamp, nav);
+
+        cout << "{\"event\":\"trade_executed\",\"order_id\":\"" << tr.order_id
+             << "\",\"side\":\"" << tr.side
+             << "\",\"price\":" << fixed << setprecision(4) << tr.price
+             << ",\"qty\":" << tr.quantity
+             << ",\"timestamp\":\"" << tr.timestamp << "\"}" << endl;
     }
 }
 
 void Engine::saveResults(const string& tradesFile, const string& navFile) {
     recorder.saveTrades(tradesFile);
     recorder.saveNav(navFile);
-    stringstream ss;
-    ss << "{";
-    ss << "\"event\":\"run_complete\",";
-    ss << "\"final_nav\":" << fixed << setprecision(4) << nav << ",";
-    ss << "\"cash\":" << cash << ",";
-    ss << "\"position\":" << position;
-    ss << "}\n";
-    cout << ss.str() << flush;
+
+    cout << "{\"event\":\"run_complete\",\"final_nav\":" << fixed << setprecision(4) << nav
+         << ",\"cash\":" << cash
+         << ",\"position\":" << position << "}" << endl;
 }

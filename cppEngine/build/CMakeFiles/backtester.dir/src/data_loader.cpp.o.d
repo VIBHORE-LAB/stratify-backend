@@ -1,7 +1,7 @@
 CMakeFiles/backtester.dir/src/data_loader.cpp.o: \
- /media/onlyvibhore/New\ Volume/vscode(webdev)/Trading-Backend/cppEngine/src/data_loader.cpp \
+ /media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/data_loader.cpp \
  /usr/include/stdc-predef.h \
- /media/onlyvibhore/New\ Volume/vscode(webdev)/Trading-Backend/cppEngine/src/data_loader.h \
+ /media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/data_loader.h \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -119,7 +119,7 @@ CMakeFiles/backtester.dir/src/data_loader.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/13/bits/charconv.h \
  /usr/include/c++/13/bits/basic_string.tcc \
- /media/onlyvibhore/New\ Volume/vscode(webdev)/Trading-Backend/cppEngine/src/types.h \
+ /media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/types.h \
  /usr/include/c++/13/fstream /usr/include/c++/13/istream \
  /usr/include/c++/13/ios /usr/include/c++/13/exception \
  /usr/include/c++/13/bits/exception_ptr.h \

@@ -1,29 +1,25 @@
 #pragma once
 #include <string>
-#include<vector>
 
-using namespace std;
-
-struct Tick{
-    string timestamp;
+struct Tick {
+    std::string timestamp;
     double price;
-    int volume;
+    int volume = 0; // optional
 };
 
-struct Order{
-    string id;
-    string timestamp;
-    string side;
+struct Order {
+    std::string id;
+    std::string timestamp;
+    std::string side;
     double price;
     int quantity;
-    bool isMarket;
+    bool isMarket = true;
 };
 
-
-struct Trade{
-    string timestamp;
-    string order_id;
-    string side;
+struct Trade {
+    std::string timestamp;
+    std::string order_id;
+    std::string side;
     double price;
     int quantity;
 };

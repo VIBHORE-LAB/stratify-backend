@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine"
+CMAKE_SOURCE_DIR = "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/build"
+CMAKE_BINARY_DIR = "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/build/CMakeFiles" "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/build//CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/build/CMakeFiles" "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/build//CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -128,6 +128,54 @@ backtester: cmake_check_build_system
 backtester/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/backtester.dir/build.make CMakeFiles/backtester.dir/build
 .PHONY : backtester/fast
+
+src/bollinger_strategy.o: src/bollinger_strategy.cpp.o
+.PHONY : src/bollinger_strategy.o
+
+# target to build an object file
+src/bollinger_strategy.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/backtester.dir/build.make CMakeFiles/backtester.dir/src/bollinger_strategy.cpp.o
+.PHONY : src/bollinger_strategy.cpp.o
+
+src/bollinger_strategy.i: src/bollinger_strategy.cpp.i
+.PHONY : src/bollinger_strategy.i
+
+# target to preprocess a source file
+src/bollinger_strategy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/backtester.dir/build.make CMakeFiles/backtester.dir/src/bollinger_strategy.cpp.i
+.PHONY : src/bollinger_strategy.cpp.i
+
+src/bollinger_strategy.s: src/bollinger_strategy.cpp.s
+.PHONY : src/bollinger_strategy.s
+
+# target to generate assembly for a file
+src/bollinger_strategy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/backtester.dir/build.make CMakeFiles/backtester.dir/src/bollinger_strategy.cpp.s
+.PHONY : src/bollinger_strategy.cpp.s
+
+src/breakout_strategy.o: src/breakout_strategy.cpp.o
+.PHONY : src/breakout_strategy.o
+
+# target to build an object file
+src/breakout_strategy.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/backtester.dir/build.make CMakeFiles/backtester.dir/src/breakout_strategy.cpp.o
+.PHONY : src/breakout_strategy.cpp.o
+
+src/breakout_strategy.i: src/breakout_strategy.cpp.i
+.PHONY : src/breakout_strategy.i
+
+# target to preprocess a source file
+src/breakout_strategy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/backtester.dir/build.make CMakeFiles/backtester.dir/src/breakout_strategy.cpp.i
+.PHONY : src/breakout_strategy.cpp.i
+
+src/breakout_strategy.s: src/breakout_strategy.cpp.s
+.PHONY : src/breakout_strategy.s
+
+# target to generate assembly for a file
+src/breakout_strategy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/backtester.dir/build.make CMakeFiles/backtester.dir/src/breakout_strategy.cpp.s
+.PHONY : src/breakout_strategy.cpp.s
 
 src/data_loader.o: src/data_loader.cpp.o
 .PHONY : src/data_loader.o
@@ -176,6 +224,30 @@ src/engine.s: src/engine.cpp.s
 src/engine.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/backtester.dir/build.make CMakeFiles/backtester.dir/src/engine.cpp.s
 .PHONY : src/engine.cpp.s
+
+src/macd_strategy.o: src/macd_strategy.cpp.o
+.PHONY : src/macd_strategy.o
+
+# target to build an object file
+src/macd_strategy.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/backtester.dir/build.make CMakeFiles/backtester.dir/src/macd_strategy.cpp.o
+.PHONY : src/macd_strategy.cpp.o
+
+src/macd_strategy.i: src/macd_strategy.cpp.i
+.PHONY : src/macd_strategy.i
+
+# target to preprocess a source file
+src/macd_strategy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/backtester.dir/build.make CMakeFiles/backtester.dir/src/macd_strategy.cpp.i
+.PHONY : src/macd_strategy.cpp.i
+
+src/macd_strategy.s: src/macd_strategy.cpp.s
+.PHONY : src/macd_strategy.s
+
+# target to generate assembly for a file
+src/macd_strategy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/backtester.dir/build.make CMakeFiles/backtester.dir/src/macd_strategy.cpp.s
+.PHONY : src/macd_strategy.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -249,6 +321,30 @@ src/momentum_strategy.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/backtester.dir/build.make CMakeFiles/backtester.dir/src/momentum_strategy.cpp.s
 .PHONY : src/momentum_strategy.cpp.s
 
+src/moving_crossover_strategy.o: src/moving_crossover_strategy.cpp.o
+.PHONY : src/moving_crossover_strategy.o
+
+# target to build an object file
+src/moving_crossover_strategy.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/backtester.dir/build.make CMakeFiles/backtester.dir/src/moving_crossover_strategy.cpp.o
+.PHONY : src/moving_crossover_strategy.cpp.o
+
+src/moving_crossover_strategy.i: src/moving_crossover_strategy.cpp.i
+.PHONY : src/moving_crossover_strategy.i
+
+# target to preprocess a source file
+src/moving_crossover_strategy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/backtester.dir/build.make CMakeFiles/backtester.dir/src/moving_crossover_strategy.cpp.i
+.PHONY : src/moving_crossover_strategy.cpp.i
+
+src/moving_crossover_strategy.s: src/moving_crossover_strategy.cpp.s
+.PHONY : src/moving_crossover_strategy.s
+
+# target to generate assembly for a file
+src/moving_crossover_strategy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/backtester.dir/build.make CMakeFiles/backtester.dir/src/moving_crossover_strategy.cpp.s
+.PHONY : src/moving_crossover_strategy.cpp.s
+
 src/recorder.o: src/recorder.cpp.o
 .PHONY : src/recorder.o
 
@@ -273,6 +369,54 @@ src/recorder.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/backtester.dir/build.make CMakeFiles/backtester.dir/src/recorder.cpp.s
 .PHONY : src/recorder.cpp.s
 
+src/rsi_strategy.o: src/rsi_strategy.cpp.o
+.PHONY : src/rsi_strategy.o
+
+# target to build an object file
+src/rsi_strategy.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/backtester.dir/build.make CMakeFiles/backtester.dir/src/rsi_strategy.cpp.o
+.PHONY : src/rsi_strategy.cpp.o
+
+src/rsi_strategy.i: src/rsi_strategy.cpp.i
+.PHONY : src/rsi_strategy.i
+
+# target to preprocess a source file
+src/rsi_strategy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/backtester.dir/build.make CMakeFiles/backtester.dir/src/rsi_strategy.cpp.i
+.PHONY : src/rsi_strategy.cpp.i
+
+src/rsi_strategy.s: src/rsi_strategy.cpp.s
+.PHONY : src/rsi_strategy.s
+
+# target to generate assembly for a file
+src/rsi_strategy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/backtester.dir/build.make CMakeFiles/backtester.dir/src/rsi_strategy.cpp.s
+.PHONY : src/rsi_strategy.cpp.s
+
+src/vwap_strategy.o: src/vwap_strategy.cpp.o
+.PHONY : src/vwap_strategy.o
+
+# target to build an object file
+src/vwap_strategy.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/backtester.dir/build.make CMakeFiles/backtester.dir/src/vwap_strategy.cpp.o
+.PHONY : src/vwap_strategy.cpp.o
+
+src/vwap_strategy.i: src/vwap_strategy.cpp.i
+.PHONY : src/vwap_strategy.i
+
+# target to preprocess a source file
+src/vwap_strategy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/backtester.dir/build.make CMakeFiles/backtester.dir/src/vwap_strategy.cpp.i
+.PHONY : src/vwap_strategy.cpp.i
+
+src/vwap_strategy.s: src/vwap_strategy.cpp.s
+.PHONY : src/vwap_strategy.s
+
+# target to generate assembly for a file
+src/vwap_strategy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/backtester.dir/build.make CMakeFiles/backtester.dir/src/vwap_strategy.cpp.s
+.PHONY : src/vwap_strategy.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -282,12 +426,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... backtester"
+	@echo "... src/bollinger_strategy.o"
+	@echo "... src/bollinger_strategy.i"
+	@echo "... src/bollinger_strategy.s"
+	@echo "... src/breakout_strategy.o"
+	@echo "... src/breakout_strategy.i"
+	@echo "... src/breakout_strategy.s"
 	@echo "... src/data_loader.o"
 	@echo "... src/data_loader.i"
 	@echo "... src/data_loader.s"
 	@echo "... src/engine.o"
 	@echo "... src/engine.i"
 	@echo "... src/engine.s"
+	@echo "... src/macd_strategy.o"
+	@echo "... src/macd_strategy.i"
+	@echo "... src/macd_strategy.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
@@ -297,9 +450,18 @@ help:
 	@echo "... src/momentum_strategy.o"
 	@echo "... src/momentum_strategy.i"
 	@echo "... src/momentum_strategy.s"
+	@echo "... src/moving_crossover_strategy.o"
+	@echo "... src/moving_crossover_strategy.i"
+	@echo "... src/moving_crossover_strategy.s"
 	@echo "... src/recorder.o"
 	@echo "... src/recorder.i"
 	@echo "... src/recorder.s"
+	@echo "... src/rsi_strategy.o"
+	@echo "... src/rsi_strategy.i"
+	@echo "... src/rsi_strategy.s"
+	@echo "... src/vwap_strategy.o"
+	@echo "... src/vwap_strategy.i"
+	@echo "... src/vwap_strategy.s"
 .PHONY : help
 
 

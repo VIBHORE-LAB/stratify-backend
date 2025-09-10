@@ -6,8 +6,9 @@ import dotenv from 'dotenv';
 import initPassport from './config/passport.js';
 import routes from './routes/index.js';
 import db from './models/index.js';
+import path from 'path';
 
-dotenv.config();
+dotenv.config({ path: path.resolve("./backend/.env") });
 const app = express();
 
 app.use(helmet());

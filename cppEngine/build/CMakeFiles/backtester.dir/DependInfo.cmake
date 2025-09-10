@@ -8,12 +8,18 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/src/data_loader.cpp" "CMakeFiles/backtester.dir/src/data_loader.cpp.o" "gcc" "CMakeFiles/backtester.dir/src/data_loader.cpp.o.d"
-  "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/src/engine.cpp" "CMakeFiles/backtester.dir/src/engine.cpp.o" "gcc" "CMakeFiles/backtester.dir/src/engine.cpp.o.d"
-  "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/src/main.cpp" "CMakeFiles/backtester.dir/src/main.cpp.o" "gcc" "CMakeFiles/backtester.dir/src/main.cpp.o.d"
-  "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/src/mean_reversion_strategy.cpp" "CMakeFiles/backtester.dir/src/mean_reversion_strategy.cpp.o" "gcc" "CMakeFiles/backtester.dir/src/mean_reversion_strategy.cpp.o.d"
-  "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/src/momentum_strategy.cpp" "CMakeFiles/backtester.dir/src/momentum_strategy.cpp.o" "gcc" "CMakeFiles/backtester.dir/src/momentum_strategy.cpp.o.d"
-  "/media/onlyvibhore/New Volume/vscode(webdev)/Trading-Backend/cppEngine/src/recorder.cpp" "CMakeFiles/backtester.dir/src/recorder.cpp.o" "gcc" "CMakeFiles/backtester.dir/src/recorder.cpp.o.d"
+  "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/bollinger_strategy.cpp" "CMakeFiles/backtester.dir/src/bollinger_strategy.cpp.o" "gcc" "CMakeFiles/backtester.dir/src/bollinger_strategy.cpp.o.d"
+  "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/breakout_strategy.cpp" "CMakeFiles/backtester.dir/src/breakout_strategy.cpp.o" "gcc" "CMakeFiles/backtester.dir/src/breakout_strategy.cpp.o.d"
+  "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/data_loader.cpp" "CMakeFiles/backtester.dir/src/data_loader.cpp.o" "gcc" "CMakeFiles/backtester.dir/src/data_loader.cpp.o.d"
+  "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/engine.cpp" "CMakeFiles/backtester.dir/src/engine.cpp.o" "gcc" "CMakeFiles/backtester.dir/src/engine.cpp.o.d"
+  "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/macd_strategy.cpp" "CMakeFiles/backtester.dir/src/macd_strategy.cpp.o" "gcc" "CMakeFiles/backtester.dir/src/macd_strategy.cpp.o.d"
+  "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/main.cpp" "CMakeFiles/backtester.dir/src/main.cpp.o" "gcc" "CMakeFiles/backtester.dir/src/main.cpp.o.d"
+  "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/mean_reversion_strategy.cpp" "CMakeFiles/backtester.dir/src/mean_reversion_strategy.cpp.o" "gcc" "CMakeFiles/backtester.dir/src/mean_reversion_strategy.cpp.o.d"
+  "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/momentum_strategy.cpp" "CMakeFiles/backtester.dir/src/momentum_strategy.cpp.o" "gcc" "CMakeFiles/backtester.dir/src/momentum_strategy.cpp.o.d"
+  "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/moving_crossover_strategy.cpp" "CMakeFiles/backtester.dir/src/moving_crossover_strategy.cpp.o" "gcc" "CMakeFiles/backtester.dir/src/moving_crossover_strategy.cpp.o.d"
+  "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/recorder.cpp" "CMakeFiles/backtester.dir/src/recorder.cpp.o" "gcc" "CMakeFiles/backtester.dir/src/recorder.cpp.o.d"
+  "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/rsi_strategy.cpp" "CMakeFiles/backtester.dir/src/rsi_strategy.cpp.o" "gcc" "CMakeFiles/backtester.dir/src/rsi_strategy.cpp.o.d"
+  "/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/src/vwap_strategy.cpp" "CMakeFiles/backtester.dir/src/vwap_strategy.cpp.o" "gcc" "CMakeFiles/backtester.dir/src/vwap_strategy.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
