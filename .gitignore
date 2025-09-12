@@ -2,3 +2,5 @@
 .vscode/
 node_modules/
 .env
+backend/src/cppEngine/data/ABCB_1757699767196.csv
+backend/src/cppEngine/data

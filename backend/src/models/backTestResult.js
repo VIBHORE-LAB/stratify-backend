@@ -51,6 +51,20 @@ export default (sequelize) => {
       tradesFile: {
         type: DataTypes.STRING,
       },
+      winRate: {
+  type: DataTypes.FLOAT,
+  allowNull: true,
+field: 'winRate',
+},
+wins: {
+  type: DataTypes.INTEGER,
+  allowNull: true,
+},
+losses: {
+  type: DataTypes.INTEGER,
+  allowNull: true,
+},
+
     },
     {
       sequelize,

@@ -14,11 +14,11 @@ export const runStrategy = async (req, res) => {
       console.log('[controller] using dataPath:', dataPath);
     }
 
-    if (!strategyName || !params || !dataPath) {
-      return res.status(400).json({
-        message: 'Strategy Name, Params, Data Path are required',
-      });
-    }
+    // if (!strategyName || !params || !dataPath) {
+    //   return res.status(400).json({
+    //     message: 'Strategy Name, Params, Data Path are required',
+    //   });
+    // }
 
     const companyName = ticker || 'unknown';
     const io = req.app.get('io');
