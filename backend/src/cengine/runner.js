@@ -3,7 +3,6 @@ import { EventEmitter } from 'events';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { parseLine } from '../utils/resultParser.js';
-import fs from 'fs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -17,8 +16,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export function runBacktest(dataPath, strategyName, params = {}) {
   const emitter = new EventEmitter();
 
-  // Ensure absolute paths
-  const bin = path.resolve(process.cwd(), process.env.CENGINE_BIN);
+  // Resolve binary relative to repo root
+  const bin = path.resolve(__dirname, "../../..", process.env.CENGINE_BIN);
   const absDataPath = path.resolve(dataPath);
 
   const args = [absDataPath, strategyName];
@@ -26,9 +25,9 @@ export function runBacktest(dataPath, strategyName, params = {}) {
     args.push(`--${k}`, String(v));
   });
 
-  console.log('Spawning C++:', bin, args.join(' '));
+  console.log("Spawning C++:", bin, args.join(" "));
 
-  const child = spawn(bin, args, { cwd: process.cwd() }); // use backend cwd
+  const child = spawn(bin, args, { cwd: process.cwd() });
 
   let buffer = '';
   child.stdout.on('data', (chunk) => {
