@@ -74,7 +74,6 @@ export async function runStrategyForUser({ userId, strategyName, params, dataPat
         nav,
       });
 
-      console.log("[emit trade] user=", userId, "orderId=", trade.orderId, "ts=", trade.timestamp);
     } catch (err) {
       console.error("Error handling trade event:", err);
     }
@@ -154,7 +153,6 @@ export async function runStrategyForUser({ userId, strategyName, params, dataPat
         emitter.removeAllListeners("error");
         emitter.removeAllListeners("done");
 
-        console.log(`Backtest completed for user ${userId}, resultId=${result.id}`);
         resolve(result);
       } catch (err) {
         console.error("Backtest done handler error:", err);

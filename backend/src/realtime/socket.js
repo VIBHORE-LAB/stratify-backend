@@ -22,7 +22,6 @@ const io = new Server(httpServer, {
             socket.emit('joined',{room: userId});
         });
         io.engine.on("connection_error", (err) => {
-  console.log("Socket engine connection error:", err.req.url, err.message);
 });
 
         socket.on('disconnect',() => {});

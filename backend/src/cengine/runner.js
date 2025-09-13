@@ -25,7 +25,6 @@ export function runBacktest(dataPath, strategyName, params = {}) {
     args.push(`--${k}`, String(v));
   });
 
-  console.log("Spawning C++:", bin, args.join(" "));
 
   const child = spawn(bin, args, { cwd: process.cwd() });
 

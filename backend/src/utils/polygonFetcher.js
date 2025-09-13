@@ -15,7 +15,6 @@ export async function fetchAndSavePolygonData({ ticker, startDate, endDate }) {
   const response = await fetch(url);
   const data = await response.json();
 
-  console.log("[polygon] sample:", { count: data.count, status: data.status });
   if (!data.results || data.results.length === 0) {
     throw new Error("No Data found from polygon");
   }
@@ -33,7 +32,6 @@ export async function fetchAndSavePolygonData({ ticker, startDate, endDate }) {
 
   fs.writeFileSync(filePath, header + rows.join("\n"));
 
-  console.log("[polygon] filePath:", filePath);
   return filePath;
   }
  
