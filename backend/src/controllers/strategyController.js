@@ -27,10 +27,7 @@ export const runStrategy = async (req, res) => {
 
     // Run the strategy asynchronously
     runStrategyForUser({ userId, strategyName, params, dataPath, io, companyName, startDate, endDate })
-      .then((result) => {
-        // Emit result to the user via socket
-        io.to(userId).emit("backtest_complete", { message: "Backtest completed", result });
-      })
+   
       .catch((err) => {
         console.error(`Backtest failed for user ${userId}:`, err.message);
         io.to(userId).emit("backtest_error", { message: err.message });
