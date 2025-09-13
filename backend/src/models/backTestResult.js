@@ -45,6 +45,22 @@ export default (sequelize) => {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
+
+        ticker:{
+          type: DataTypes.STRING,
+          allowNull: false,
+        },
+
+        startDate:{
+          type: DataTypes.STRING,
+          allowNull: false,
+        },
+
+        endDate:{
+          type: DataTypes.STRING,
+          allowNull: false,
+        },
+
       navFile: {
         type: DataTypes.STRING,
       },

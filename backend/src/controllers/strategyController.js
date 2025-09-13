@@ -19,14 +19,14 @@ export const runStrategy = async (req, res) => {
       });
     }
 
-    const companyName = ticker || "unknown";
+    const companyName = ticker;
     const io = req.app.get("io");
 
     // Respond immediately so client knows backtest started
     res.json({ success: true, message: "Backtest started" });
 
     // Run the strategy asynchronously
-    runStrategyForUser({ userId, strategyName, params, dataPath, io, companyName })
+    runStrategyForUser({ userId, strategyName, params, dataPath, io, companyName, startDate, endDate })
       .then((result) => {
         // Emit result to the user via socket
         io.to(userId).emit("backtest_complete", { message: "Backtest completed", result });

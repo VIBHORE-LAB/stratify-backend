@@ -5,7 +5,7 @@ import { computeWinLoss } from "../utils/computeWinLoss.js";
 
 const { Strategy, BackTestResult, Trade } = db;
 
-export async function runStrategyForUser({ userId, strategyName, params, dataPath, io, companyName = "unknown" }) {
+export async function runStrategyForUser({ userId, strategyName, params, dataPath, io, companyName = "unknown", startDate, endDate }) {
   const strat = await Strategy.create({
     userId,
     name: strategyName,
@@ -114,6 +114,9 @@ export async function runStrategyForUser({ userId, strategyName, params, dataPat
           tradesFile: "out_trades.csv",
           wins,
           losses,
+          ticker: companyName,
+          startDate,
+          endDate,
         });
 
         if (tradesBuffer.length) {
