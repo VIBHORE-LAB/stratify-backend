@@ -1,3 +1,0 @@
-/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/build/CMakeFiles/backtester.dir
-/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/build/CMakeFiles/edit_cache.dir
-/media/onlyvibhore/D/vscode(webdev)/Trading-Backend/cppEngine/build/CMakeFiles/rebuild_cache.dir
