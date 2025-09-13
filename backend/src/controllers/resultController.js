@@ -1,5 +1,5 @@
 import { get } from "http";
-import { listResults, getResultDetail, getTotalCount,getLatest } from "../services/strategyService.js";
+import { listResults, getResultDetail, getTotalCount,getLatest,getAverageWinRate } from "../services/strategyService.js";
 
 export const getHistory = async (req, res) => {
   try {
@@ -91,3 +91,24 @@ export const getLatestResult = async(req,res) =>{
     });
   }
 }
+
+
+
+export const fetchAverageWinRate = async (req, res) => {
+  try {
+    const userId = req.user.id;
+    const { average, bestStrategy } = await getAverageWinRate(userId);
+
+    res.status(200).json({
+      success: true,
+      averageWinRate: average,
+      bestStrategy,
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({
+      success: false,
+      message: "Failed to fetch average win rate",
+    });
+  }
+};

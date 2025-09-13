@@ -8,12 +8,10 @@ export const runStrategy = async (req, res) => {
   let dataPath = req.file ? req.file.path : req.body.dataPath;
 
   try {
-    // If ticker and date range are provided, fetch data from Polygon
     if (ticker && startDate && endDate) {
       dataPath = await fetchAndSavePolygonData({ ticker, startDate, endDate });
     }
 
-    // Validate required fields
     if (!strategyName || !params || !dataPath) {
       return res.status(400).json({
         success: false,

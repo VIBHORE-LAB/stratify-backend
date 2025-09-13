@@ -207,3 +207,33 @@ export async function getLatest(userId)  {
 
   })
 }
+
+
+export async function getAverageWinRate(userId) {
+  const results = await db.BackTestResult.findAll({
+    where: { userId },
+    attributes: ["winRate"],
+    include: [
+      {
+        model: db.Strategy,
+        attributes: ["name"],
+      },
+    ],
+  });
+
+  if (!results.length) {
+    return { average: 0, bestStrategy: null };
+  }
+
+  const totalWinRate = results.reduce((sum, r) => sum + r.winRate, 0);
+  const average = totalWinRate / results.length;
+
+  const best = results.reduce((prev, curr) =>
+    curr.winRate > prev.winRate ? curr : prev
+  );
+
+  return {
+    average,
+    bestStrategy: best.Strategy ? best.Strategy.name : null,
+  };
+}
