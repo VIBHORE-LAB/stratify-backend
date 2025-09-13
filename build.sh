@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
-# Navigate to cppEngine folder
-cd cppEngine
+# Navigate to cppEngine folder relative to backend/
+cd ../cppEngine
 
 # Create build folder if it doesn't exist
 mkdir -p build
