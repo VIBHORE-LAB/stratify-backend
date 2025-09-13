@@ -1,9 +1,16 @@
 import { Server } from 'socket.io';
 
 export function initSocket(httpServer){
-    const io = new Server(httpServer,{
-        cors:{origin: '*', methods:['GET', 'POST']}
-    });
+const io = new Server(httpServer, {
+  cors: {
+    origin: [
+      "http://localhost:5173",              
+      "https://stratifyy.netlify.app"     
+    ],
+    methods: ["GET", "POST"],
+    credentials: true
+  }
+});
 
 
     io.on('connection', (socket)=>{
